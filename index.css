@@ -375,13 +375,38 @@
       transform: scale(1.5);
   }
 
+
+  @supports (backdrop-filter: blur(1.5rem)) {
+      .primary-navigation {
+          background: hsl(var(--clr-dark) / 0.95)
+      }
+  }
+
   .primary-navigation {
-      --gap: 8rem;
       --underline-gap: 2rem;
+      background: hsl(var(--clr-white) / 0.05);
+      padding: 0;
       list-style: none;
       margin: 0;
-      padding: 0;
+      backdrop-filter: blur(1.5rem);
+  }
 
+
+  @media (max-width:35rem) {
+      .primary-navigation {
+          --underline-gap: .5rem;
+          position: fixed;
+          z-index: 1000;
+          inset: 0 0 0 30%;
+          padding: min(20rem, 15vh) 2rem;
+          list-style: none;
+          margin: 0;
+          flex-direction: column;
+      }
+
+      .primary-navigation.underline-indicators>.active {
+          border: 0;
+      }
   }
 
   .primary-navigation a {
@@ -413,6 +438,7 @@
       border-color: hsl(var(--clr-white) / 1);
 
   }
+
 
 
 
@@ -482,8 +508,8 @@
 
   @media (min-width: 35rem) {
       .home {
-        background-position: center center;  
-        background-image: url(./assets/home/background-home-tablet.jpg);
+          background-position: center center;
+          background-image: url(./assets/home/background-home-tablet.jpg);
       }
   }
 
