@@ -31,8 +31,8 @@
       :root {
           --fs-800: 5rem;
           --fs-700: 2.5rem;
-          --fs-500: 1.25rem;
           --fs-600: 1.5rem;
+          --fs-500: 1.25rem;
           --fs-400: 1rem;
       }
 
@@ -43,6 +43,7 @@
           --fs-800: 6.25rem;
           --fs-700: 3.5rem;
           --fs-600: 2rem;
+          --fs-500: 1.75rem;
           --fs-400: 1.125rem;
 
       }
@@ -643,7 +644,7 @@
 
 
   .grid-container--destination>img {
-      grid-area: 'image';
+      grid-area: image;
       max-width: 60%;
   }
 
@@ -669,11 +670,15 @@
           justify-self: start;
 
       }
+
       .destination-meta {
-        flex-direction: row;
-        justify-content: space-evenly;
+          flex-direction: row;
+          justify-content: space-evenly;
       }
 
+  }
+  .destination-meta p {
+    font-size: 1.75rem;
   }
 
   @media (min-width: 45rem) {
@@ -683,19 +688,38 @@
           grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
       }
 
-      .grid-container>*:first-child {
-          grid-column: 2;
-      }
-
-      .grid-container>*:last-child {
-          grid-column: 3;
-      }
-
       .grid-container--home {
           padding-bottom: max(6rem, 20vh);
           align-items: end;
 
       }
 
+      .grid-container--home > *:first-child {
+          grid-column: 2;
+      }
+
+      .grid-container--home > *:last-child {
+          grid-column: 3;
+      }
+
+
+
+      .grid-container--destination {
+          column-gap: 3rem;
+          justify-items: start;
+          align-content: start;
+
+          grid-template-areas:
+              '. title title .'
+              '. image tabs .'
+              '. image content .';
+      }
+      .grid-container--destination > img {
+        max-width: 100%;
+      }
+      .destination-meta {
+        --gap: 7rem;
+        justify-content: start;
 
   }
+}
