@@ -18,7 +18,9 @@
 
   <link rel="stylesheet" href="index.css">
   <title>Frontend Mentor | Space tourism website</title>
-  <script src="index.js" defer></script>
+  <script src="navigation.js" defer></script>
+  <script src="tabs.js" defer></script>
+
 
 </head>
 
@@ -67,21 +69,21 @@
     </picture>
 
 
-    <div class="tab-list underline-indicators flex ">
-      <button aria-selected="true"
+    <div class="tab-list underline-indicators flex" role="tablist" aria-label="destination list">
+      <button aria-selected="true" role="tab" aria-controls="moon-tab" tabindex="0"
         class="uppercase ff-sans-cond text-light bg-dark-trans letter-spacing-2">Moon</button>
-      <button aria-selected="false"
+      <button aria-selected="false" role="tab" aria-controls="mars-tab" tabindex="-1"
         class="uppercase ff-sans-cond text-light bg-dark-trans letter-spacing-2">Mars</button>
-      <button aria-selected="false"
+      <button aria-selected="false" role="tab" aria-controls="europa-tab" tabindex="-1"
         class="uppercase ff-sans-cond text-light bg-dark-trans letter-spacing-2">Europa</button>
-      <button aria-selected="false"
+      <button aria-selected="false" role="tab" aria-controls="titan-tab" tabindex="-1"
         class="uppercase ff-sans-cond text-light bg-dark-trans letter-spacing-2">Titan</button>
 
     </div>
 
     <!--Moon-->
 
-    <article class="destination-info flow">
+    <article class="destination-info flow" id="moon-tab" tabindex="0">
       <h2 class="uppercase fs-800 ff-serif">moon</h2>
       <p class="text-light"> See our planet as you've never seen it before. A perfect relaxing trip away to help
         regain perspective and come back refreshed. While you're there, take in some history
@@ -101,7 +103,7 @@
 
     <!--Mars-->
 
-    <article hidden class="destination-info flow">
+    <article hidden class="destination-info flow" id="mars-tab" tabindex="0">
       <h2 class="uppercase fs-800 ff-serif">mars</h2>
       <p class="text-light">Don't forget to pack your hiking boots. You'll need them to tackle Olympus Mons,
         the tallest planetary mountain in our solar system. It's two and a half times
@@ -121,10 +123,11 @@
 
     <!--Europa-->
 
-    <article hidden class="destination-info flow">
+    <article hidden class="destination-info flow" id="europa-tab" tabindex="0">
       <h2 class="uppercase fs-800 ff-serif">europa</h2>
       <p class="text-light"> The smallest of the four Galilean moons orbiting Jupiter, Europa is a
-        winter lover's dream. With an icy surface, it's perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug
+        winter lover's dream. With an icy surface, it's perfect for a bit of ice skating, curling, hockey, or simple
+        relaxation in your snug
         wintery cabin.
       </p>
       </div>
@@ -142,10 +145,10 @@
 
     <!--Titan-->
 
-    <article hidden class="destination-info flow">
+    <article hidden class="destination-info flow" id="titan-tab" tabindex="0">
       <h2 class="uppercase fs-800 ff-serif">titan</h2>
-      <p class="text-light">The only moon known to have a dense atmosphere other than Earth, Titan 
-        is a home away from home (just a few hundred degrees colder!). As a 
+      <p class="text-light">The only moon known to have a dense atmosphere other than Earth, Titan
+        is a home away from home (just a few hundred degrees colder!). As a
         bonus, you get striking views of the Rings of Saturn.</p>
       </div>
       <div class="destination-meta flex">
