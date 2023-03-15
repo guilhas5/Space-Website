@@ -56,9 +56,11 @@
       <button aria-selected="false"><span class="sr-only">The crew engineer</span></button>
     </div>
 
-    <article class="crew-info flow">
+    <!--Commander-->
+
+    <article class="crew-info flow" id="commander">
       <header class="flow--space-small">
-      <h2 class="ff-serif fs-600 uppercase" style='color: hsl(var(--clr-white) / 0.50);
+        <h2 class="ff-serif fs-600 uppercase" style='color: hsl(var(--clr-white) / 0.50);
       ;'>Commander</h2>
       </header>
       <p class="ff-serif fs-700 uppercase">Douglas hurley</p>
@@ -67,13 +69,65 @@
         commander of Crew Dragon Demo-2.</p>
 
     </article>
-    <picture>
+    <picture id="commander-image">
       <source srcset="./assets/crew/image-douglas-hurley.webp">
       <img src="./assets/crew/image-douglas-hurley.png" alt="commander Douglas Hurley">
+    </picture>
 
+    <!--Mission Specialist-->
+    <article hidden class="crew-info flow" id="specialist">
+      <header class="flow--space-small">
+        <h2 class="ff-serif fs-600 uppercase" style='color: hsl(var(--clr-white) / 0.50);'>Mission Specialist</h2>
+      </header>
+      <p class="ff-serif fs-700 uppercase">Mark Shuttleworth</p>
+      <p class="text-light">Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind
+        the Linux-based Ubuntu operating system. Shuttleworth became the first South
+        African to travel to space as a space tourist.</p>
+    </article>
+    <picture hidden id="specialist-image">
+      <source srcset="./assets/crew/image-mark-shuttleworth.webp">
+      <img src="./assets/crew/image-mark-shuttleworth.png" alt="Mission Specialist Mark Shuttleworth">
+    </picture>
+
+    <!--Pilot-->
+    <article hidden class="crew-info flow" id="pilot">
+      <header class="flow--space-small">
+        <h2 class="ff-serif fs-600 uppercase" style='color: hsl(var(--clr-white) / 0.50);'>Pilot</h2>
+      </header>
+      <p class="ff-serif fs-700 uppercase">Victor Glover</p>
+      <p class="text-light"> Pilot on the first operational flight of the SpaceX Crew Dragon to the
+        International Space Station. Glover is a commander in the U.S. Navy where
+        he pilots an F/A-18.He was a crew member of Expedition 64, and served as a
+        station systems flight engineer.</p>
+    </article>
+    <picture hidden id="pilot-image">
+      <source srcset="./assets/crew/image-victor-glover.webp">
+      <img src="./assets/crew/image-victor-glover.png" alt="Pilot Victor Glover">
+    </picture>
+
+
+    <!--Flight Engineer-->
+    <article hidden class="crew-info flow" id="engineer">
+      <header class="flow--space-small">
+        <h2 class="ff-serif fs-600 uppercase" style='color: hsl(var(--clr-white) / 0.50);'>Flight Engineer</h2>
+      </header>
+      <p class="ff-serif fs-700 uppercase">Anousheh Ansari</p>
+      <p class="text-light">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems.
+        Ansari was the fourth self-funded space tourist, the first self-funded woman to
+        fly to the ISS, and the first Iranian in space.</p>
+    </article>
+    <picture hidden id="engineer-image">
+      <source srcset="./assets/crew/image-anousheh-ansari.webp">
+      <img src="./assets/crew/image-anousheh-ansari.png" alt="Flight engineer Anousheh Ansari">
     </picture>
   </main>
 
+
+
+
+
 </body>
+
+
 
 </html>
