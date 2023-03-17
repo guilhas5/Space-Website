@@ -603,6 +603,9 @@
       background-image: url(./assets/crew/background-crew-mobile.jpg);
   }
 
+  .technology {
+      background-image: url(./assets/technology/background-technology-mobile.jpg);
+  }
 
   @media (min-width: 35rem) {
       .home {
@@ -647,8 +650,21 @@
       }
   }
 
+  /* technology*/
 
 
+  @media (min-width: 35rem) {
+      .technology {
+          background-position: center center;
+          background-image: url(./assets/destination/background-tecnhology-tablet.jpg);
+      }
+  }
+
+  @media (min-width: 45rem) {
+      .technology {
+          background-image: url(./assets/destination/background-technology-desktop.jpg);
+      }
+  }
 
 
   /* ----------------------------- */
@@ -746,6 +762,31 @@
 
   }
 
+  /* technology layot */
+
+  .grid-container--technology {  
+    --flow-space: 2rem;
+      grid-template-areas:
+          'title'
+          'image'
+          'numbers'
+          'content';
+  }
+
+  .grid-container--technology>picture {
+      grid-area: image;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      max-width: 100vw;
+      
+  }
+
+
+
+
+
   @media (min-width: 35em) {
       .numbered-title {
           margin: 3rem 0 2rem 0;
@@ -834,12 +875,13 @@
           grid-template-areas:
               '. title title .'
               '. content image .'
-              '. dots image .';  
+              '. dots image .';
 
       }
-      .grid-container--crew > picture {
-        grid-column: span 2;
-        align-self: end;
-        max-width: 90%;
+
+      .grid-container--crew>picture {
+          grid-column: span 2;
+          align-self: end;
+          max-width: 90%;
       }
   }
