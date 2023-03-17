@@ -808,8 +808,10 @@
               'image';
 
       }
+      .grid-container--technology p {
+        padding-inline: 5rem ;
+      }
   }
-
   .destination-meta p {
       font-size: 1.75rem;
   }
